@@ -11,5 +11,13 @@ int main(){
     cin.tie(0);
 
     // Rjesenje zadatka
-
+    int x;
+    cin >> x;
+ 
+    if (!(x%2) && x!=2)
+        cout<<"YES";
+    else
+        cout<<"NO";
+ 
+	return 0;
 }
