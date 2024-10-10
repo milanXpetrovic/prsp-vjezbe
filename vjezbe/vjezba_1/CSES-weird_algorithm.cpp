@@ -11,5 +11,22 @@ int main(){
     cin.tie(0);
 
     // Rjesenje zadatka
+    ll n;
+    cin >> n;
+ 
+    while (n != 1) {
+        if (!(n%2)) {
+            cout <<n <<" ";
+            n /= 2;
+        } else {
+            cout <<n <<" ";
+            n = n*3+1;
+        }
+    };
+ 
+    if (n==1) {
+        cout <<n;
+    }
 
+    return 0;
 }
