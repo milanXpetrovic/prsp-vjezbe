@@ -1,15 +1,17 @@
-#include <iostream>
-// #include <bits/stdc++.h>
-
+#include<iostream>
+ 
 using namespace std;
-
-typedef long long ll;
-
-int main(){
-    freopen("ulaz.txt", "r", stdin);
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-
-    // Rjesenje zadatka
-
+ 
+int main()
+{
+    long long n;
+    cin >> n;
+ 
+    cout << n << " ";
+    while(n != 1)
+    {
+        if(n % 2 == 0) n = n / 2;
+        else n = (n * 3) + 1;
+        cout << n << " ";
+    }
 }
