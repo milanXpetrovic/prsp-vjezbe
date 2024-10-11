@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <limits.h>
 // #include <bits/stdc++.h>
 
 using namespace std;
@@ -10,6 +12,27 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    // Rjesenje zadatka
+    int n;
+    vector<int> numbers;
+    while (cin >> n) {
+        numbers.push_back(n);
+    }
 
+    int zbroj = INT_MIN;
+    for (int i=0; i<numbers.size(); i++) {
+        for (int j=0; j<numbers.size(); j++) {
+            int temp = 0;
+
+            for (int k=i; k<j; k++) {
+                temp += numbers[k];
+            }
+
+            if (temp > zbroj) {
+                zbroj = temp;
+            }
+        }
+    }
+
+    cout<<zbroj;
+    return 0;
 }
